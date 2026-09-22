@@ -3,7 +3,9 @@ pipeline {
     stages {
         stage('STAGE1') {
             steps {
-                sh 'ls -lrt'
+                sh '''
+			ls -lrt
+		   '''
             }
         }
 
@@ -12,7 +14,7 @@ pipeline {
                 sh '''
                     pwd 
                     sleep 10
-                    ls -lrt
+                    date
                 '''
             }
         }
@@ -25,7 +27,7 @@ pipeline {
 
         stage('STAGE4') {
             steps {
-                 sh 'echo THis is STAGE4'
+                 sh 'echo This is STAGE4'
             }
         }
     }
